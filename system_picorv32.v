@@ -108,10 +108,10 @@ output [6:0] hex1,output [6:0] hex2,output [6:0] hex3, output [6:0] hex4,output 
 		 {`C_WR,32'h0000_8500}  : sys_rw_bus <= 15'b010000000000000; //pwm2_cr wr @ 8500
 		 {`C_RD,32'h0000_8504}  : sys_rw_bus <= 15'b001000000000000; //pwm2_pres rd @ 8504
 		 {`C_WR,32'h0000_8504}  : sys_rw_bus <= 15'b000100000000000; //pwm2_pres wr @ 8504
-		 {`C_RD,32'h0000_8508}  : sys_rw_bus <= 15'b000010000000000; //pwm2_pres rd @ 8508
-		 {`C_WR,32'h0000_8508}  : sys_rw_bus <= 15'b000001000000000; //pwm2_pres wr @ 8508
-		 {`C_RD,32'h0000_850C}  : sys_rw_bus <= 15'b000000100000000; //pwm2_pres rd @ 850C
-		 {`C_WR,32'h0000_850C}  : sys_rw_bus <= 15'b000000010000000; //pwm2_pres wr @ 850C
+		 {`C_RD,32'h0000_8508}  : sys_rw_bus <= 15'b000010000000000; //pwm2_WIDTH1 rd @ 8508
+		 {`C_WR,32'h0000_8508}  : sys_rw_bus <= 15'b000001000000000; //pwm2_WIDTH1 wr @ 8508
+		 {`C_RD,32'h0000_850C}  : sys_rw_bus <= 15'b000000100000000; //pwm2_WIDTH2 rd @ 850C
+		 {`C_WR,32'h0000_850C}  : sys_rw_bus <= 15'b000000010000000; //pwm2_WIDTH2 wr @ 850C
 
 	// and update all "(7+0)'b000..." consistency 
 	  	default                 : sys_rw_bus <= 15'b000000000000000; 
